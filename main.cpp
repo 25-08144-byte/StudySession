@@ -16,14 +16,10 @@ struct StudySession {
 
 vector<StudySession> sessions;
 
-
-// PRODUCTIVITY CALCULATION
 double calculateProductivity(int duration, int focus, int difficulty) {
     return (duration * focus) / (double)difficulty;
 }
 
-
-// RESULT LABEL
 string getResult(double score) {
     if (score >= 90)
         return "Excellent";
@@ -35,8 +31,6 @@ string getResult(double score) {
         return "Needs Improvement";
 }
 
-
-// ADVICE
 string getAdvice(double score) {
     if (score >= 80)
         return "Excellent focus! Keep it up and challenge yourself.";
@@ -51,8 +45,6 @@ string getAdvice(double score) {
         return "Needs improvement. Use shorter sessions and take breaks.";
 }
 
-
-// ADD SESSION
 void addSession() {
     StudySession s;
     int timeChoice;
@@ -98,8 +90,6 @@ void addSession() {
     cout << "\nSession added successfully!\n";
 }
 
-
-// SHOW RECORDS
 void showSessions() {
     if (sessions.empty()) {
         cout << "\nNo sessions recorded.\n";
@@ -131,8 +121,6 @@ void showSessions() {
     }
 }
 
-
-// ANALYZE ALL
 void analyzeAll() {
     if (sessions.empty()) {
         cout << "\nNo data to analyze.\n";
@@ -177,8 +165,6 @@ void analyzeAll() {
          << " (" << best->productivityScore << ")\n";
 }
 
-
-// ANALYZE ONE SUBJECT
 void analyzeOneSubject() {
     if (sessions.empty()) {
         cout << "\nNo data to analyze.\n";
@@ -247,8 +233,6 @@ void analyzeOneSubject() {
          << " (" << best.productivityScore << ")\n";
 }
 
-
-// ANALYZE MENU
 void analyze() {
     if (sessions.empty()) {
         cout << "\nNo data to analyze.\n";
@@ -279,7 +263,6 @@ void analyze() {
 }
 
 
-// MAIN
 int main() {
     int choice;
 
